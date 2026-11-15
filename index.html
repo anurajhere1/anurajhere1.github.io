@@ -438,15 +438,7 @@
 
         .edu-info p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .edu-info .score {
-            display: inline-block;
-            margin-top: 8px;
-            color: var(--accent-purple);
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
         }
 
         /* --- Contact Section --- */
@@ -750,7 +742,6 @@
                 <div class="edu-info">
                     <h3>L.L.B (Hons)</h3>
                     <p>Sage University</p>
-                    <span class="score">CGPA: 8.20</span>
                 </div>
             </div>
 
@@ -759,7 +750,6 @@
                 <div class="edu-info">
                     <h3>Bachelor of Commerce (B.Com)</h3>
                     <p>Barkatullah University</p>
-                    <span class="score">Score: 68%</span>
                 </div>
             </div>
         </div>
@@ -835,7 +825,6 @@
             const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
             const body = encodeURIComponent(`Hello Anuraj,\n\nMy Name: ${name}\nMy Email: ${email}\n\nMessage:\n${message}`);
 
-            // Opens default mail app (Outlook/Gmail) with pre-filled content
             window.location.href = `mailto:${myEmail}?subject=${subject}&body=${body}`;
         }
     </script>
