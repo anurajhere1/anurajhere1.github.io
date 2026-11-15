@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --bg-dark: #090d16;
@@ -567,9 +567,201 @@
                 display: none;
             }
         }
+        /* --- Futuristic visual layer --- */
+        :root {
+            --bg-dark: #07110f;
+            --bg-card: rgba(16, 31, 29, 0.62);
+            --bg-card-hover: rgba(24, 48, 44, 0.82);
+            --accent-blue: #a7f3d0;
+            --accent-purple: #f0abfc;
+            --text-primary: #effff8;
+            --text-secondary: #9db6ae;
+            --border-color: rgba(167, 243, 208, 0.14);
+            --border-highlight: rgba(167, 243, 208, 0.42);
+            --gradient-accent: linear-gradient(135deg, #a7f3d0 0%, #f0abfc 100%);
+        }
+
+        html { background: var(--bg-dark); }
+
+        body {
+            position: relative;
+            isolation: isolate;
+            background-color: var(--bg-dark);
+            background-image:
+                radial-gradient(circle at 8% 8%, rgba(110, 231, 183, 0.14), transparent 28rem),
+                radial-gradient(circle at 92% 32%, rgba(240, 171, 252, 0.11), transparent 26rem),
+                linear-gradient(180deg, #07110f 0%, #0a1715 48%, #07110f 100%);
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+            opacity: .28;
+            background-image: linear-gradient(rgba(167, 243, 208, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(167, 243, 208, .06) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, transparent 0, rgba(7, 17, 15, .18) 42%, rgba(7, 17, 15, .72) 100%);
+        }
+
+        ::selection { color: #07110f; background: #a7f3d0; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #07110f; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(#6ee7b7, #c084fc); border: 3px solid #07110f; border-radius: 999px; }
+
+        nav {
+            background: rgba(7, 17, 15, 0.68);
+            border-bottom-color: rgba(167, 243, 208, .12);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+        }
+
+        nav::after {
+            content: "";
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            bottom: -1px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(167, 243, 208, .7), rgba(240, 171, 252, .7), transparent);
+            opacity: .7;
+        }
+
+        .logo { letter-spacing: -.04em; }
+        .logo span { color: var(--accent-purple); }
+        .nav-links a { transition: color .25s ease, transform .25s ease; }
+        .nav-links a:hover { color: var(--accent-blue); transform: translateY(-1px); }
+
+        .hero { overflow: hidden; }
+        .hero::before {
+            top: 8%;
+            left: -12%;
+            width: 420px;
+            height: 420px;
+            background: rgba(110, 231, 183, .13);
+            filter: blur(120px);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: 5%;
+            top: 24%;
+            width: 260px;
+            height: 260px;
+            border: 1px solid rgba(240, 171, 252, .18);
+            border-radius: 50%;
+            box-shadow: 0 0 80px rgba(240, 171, 252, .12), inset 0 0 60px rgba(167, 243, 208, .06);
+            animation: orbitGlow 9s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero-text > * { animation: riseIn .75s cubic-bezier(.2, .8, .2, 1) both; }
+        .hero-text > :nth-child(1) { animation-delay: .08s; }
+        .hero-text > :nth-child(2) { animation-delay: .16s; }
+        .hero-text > :nth-child(3) { animation-delay: .24s; }
+        .hero-text > :nth-child(4) { animation-delay: .32s; }
+        .hero-text > :nth-child(5) { animation-delay: .4s; }
+        .hero-text h1 {
+            background: linear-gradient(110deg, #effff8 20%, #a7f3d0 52%, #f0abfc 92%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-text h2 { color: #c4d8d1; }
+        .hero-text p { color: var(--text-secondary); }
+
+        .badge {
+            background: rgba(110, 231, 183, .08);
+            border-color: rgba(110, 231, 183, .25);
+            color: var(--accent-blue);
+            box-shadow: 0 0 24px rgba(110, 231, 183, .08);
+        }
+        .badge i { font-size: .7rem; animation: pulseDot 2.2s ease-in-out infinite; }
+
+        .btn { border-radius: 999px; }
+        .btn-primary {
+            color: #07110f;
+            box-shadow: 0 12px 28px rgba(110, 231, 183, .16);
+        }
+        .btn-primary:hover { box-shadow: 0 16px 34px rgba(110, 231, 183, .28); }
+        .btn-secondary {
+            border-color: rgba(167, 243, 208, .24);
+            background: rgba(255, 255, 255, .045);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover { background: rgba(167, 243, 208, .08); border-color: var(--accent-blue); }
+
+        section { position: relative; }
+        .section-title { position: relative; }
+        .section-title span { color: var(--accent-blue); display: inline-flex; align-items: center; gap: 10px; }
+        .section-title span::before { content: ""; width: 28px; height: 1px; background: var(--accent-purple); box-shadow: 0 0 12px var(--accent-purple); }
+        .section-title h2 { letter-spacing: -.04em; }
+        .section-title h2::after { content: ""; display: block; width: 54px; height: 3px; margin-top: 16px; border-radius: 999px; background: var(--gradient-accent); }
+
+        .exp-card, .skill-group, .edu-card, .contact-card, .ai-section,
+        #about > div[style] {
+            background: linear-gradient(145deg, rgba(24, 48, 44, .68), rgba(12, 24, 23, .52));
+            border-color: rgba(167, 243, 208, .14);
+            box-shadow: 0 18px 55px rgba(0, 0, 0, .16), inset 0 1px 0 rgba(255, 255, 255, .045);
+            backdrop-filter: blur(18px);
+        }
+
+        .exp-card, .skill-group, .edu-card, .contact-card { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+        .exp-card:hover, .skill-group:hover, .edu-card:hover, .contact-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(167, 243, 208, .38);
+            box-shadow: 0 24px 65px rgba(0, 0, 0, .26), 0 0 30px rgba(110, 231, 183, .06);
+        }
+        .timeline { border-left-color: rgba(167, 243, 208, .2); }
+        .timeline-item::before { background: #6ee7b7; box-shadow: 0 0 0 5px rgba(110, 231, 183, .1), 0 0 18px #6ee7b7; }
+        .exp-header .company, .ai-box h4 { color: var(--accent-blue); }
+        .exp-header .duration, .tag-item { background: rgba(255, 255, 255, .045); border-color: rgba(167, 243, 208, .12); }
+        .exp-bullet li::before { color: var(--accent-purple); }
+        .skill-group i, .ai-header i, .edu-icon, .contact-item i { color: var(--accent-purple); }
+        .skill-group i, .ai-header i { filter: drop-shadow(0 0 12px rgba(240, 171, 252, .25)); }
+        .edu-icon, .contact-item i { background: rgba(240, 171, 252, .08); border-color: rgba(240, 171, 252, .18); }
+        .tag-item { transition: background .25s ease, color .25s ease, border-color .25s ease; }
+        .tag-item:hover { color: #07110f; background: var(--accent-blue); border-color: var(--accent-blue); }
+        .ai-section { background: linear-gradient(145deg, rgba(32, 47, 58, .66), rgba(15, 24, 31, .5)); }
+        .ai-box { background: rgba(7, 17, 15, .38); border-color: rgba(167, 243, 208, .12); transition: transform .3s ease, border-color .3s ease; }
+        .ai-box:hover { transform: translateY(-4px); border-color: rgba(240, 171, 252, .38); }
+        .contact-form input, .contact-form textarea { background: rgba(7, 17, 15, .42); border-color: rgba(167, 243, 208, .16); transition: border-color .25s ease, box-shadow .25s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(110, 231, 183, .08); }
+        footer { background: rgba(4, 11, 10, .78); border-top-color: rgba(167, 243, 208, .12); }
+
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1); }
+        .reveal.is-visible { opacity: 1; transform: none; }
+        .scroll-progress { position: fixed; top: 0; left: 0; width: 0; height: 2px; z-index: 1100; background: var(--gradient-accent); box-shadow: 0 0 14px rgba(110, 231, 183, .8); }
+
+        @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+        @keyframes pulseDot { 50% { opacity: .45; transform: scale(.72); } }
+        @keyframes orbitGlow { 50% { transform: translate(-18px, 14px) scale(1.08); opacity: .55; } }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+            .reveal { opacity: 1; transform: none; }
+        }
+
+        @media print {
+            body, html { background: #fff !important; background-image: none !important; }
+            body::before, body::after, .hero::before, .hero::after, .scroll-progress { display: none !important; }
+            .exp-card, .skill-group, .edu-card, .contact-card, .ai-section, #about > div[style] { box-shadow: none !important; backdrop-filter: none !important; }
+        }
     </style>
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <!-- Header Navigation -->
     <nav>
@@ -592,7 +784,7 @@
             <h1>Anuraj Kushwaha</h1>
             <h2>HR & Industrial Relations Professional | Web Designer & AI Integrator</h2>
             <p>Hands-on experience in manufacturing environments specializing in recruitment, statutory compliance, FTE lifecycle management, responsive web design, and agentic AI workflow integration.</p>
-            
+
             <div class="btn-group">
                 <button onclick="downloadPDF()" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Resume (PDF)</button>
                 <a href="#contact" class="btn btn-secondary"><i class="fa-regular fa-envelope"></i> Get In Touch</a>
@@ -704,7 +896,7 @@
                     <p style="color: var(--text-secondary);">How I leverage artificial intelligence as a practical collaborator for maximum efficiency.</p>
                 </div>
             </div>
-            
+
             <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 20px;">
                 I use AI tools confidently to support my work, improve productivity, and move from ideas to practical outcomes. I’m familiar with agentic AI workflows and understand how AI agents can handle multi-step tasks with direction and oversight. I treat AI as a hands-on productivity partner, using it to explore ideas, organize information, and work through tasks more efficiently.
             </p>
@@ -809,6 +1001,19 @@
 
     <!-- JavaScript Functions -->
     <script>
+        const revealItems = document.querySelectorAll('section, .exp-card, .skill-group, .ai-box, .edu-card, .contact-card');
+        revealItems.forEach(item => item.classList.add('reveal'));
+        const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+        }), { threshold: 0.12 });
+        revealItems.forEach(item => revealObserver.observe(item));
+
+        const progress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            progress.style.width = `${scrollable ? (window.scrollY / scrollable) * 100 : 0}%`;
+        }, { passive: true });
+
         // PDF Download Trigger
         function downloadPDF() {
             window.print();
@@ -817,7 +1022,7 @@
         // Automatic Mail Drafting Function
         function handleDirectMail(event) {
             event.preventDefault();
-            
+
             const name = document.getElementById('user-name').value;
             const email = document.getElementById('user-email').value;
             const message = document.getElementById('user-message').value;
