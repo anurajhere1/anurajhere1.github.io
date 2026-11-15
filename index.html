@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Ashita | Personal Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- Root Variables for Easy Customization --- */
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
@@ -38,7 +37,7 @@
             line-height: 1.6;
         }
 
-        /* --- Sticky Navigation Bar --- */
+        /* Navigation Bar */
         nav {
             position: fixed;
             top: 0;
@@ -77,7 +76,7 @@
             color: var(--accent-color);
         }
 
-        /* --- Hero Section --- */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -88,7 +87,7 @@
         }
 
         .hero-text {
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .hero-text .greeting {
@@ -156,7 +155,7 @@
             transform: translateY(-3px);
         }
 
-        /* --- Section Header Styling --- */
+        /* Section Title */
         section {
             padding: 100px 8%;
         }
@@ -185,7 +184,7 @@
             border-radius: 2px;
         }
 
-        /* --- About Section --- */
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -223,7 +222,7 @@
             margin: 0;
         }
 
-        /* --- Skills Section --- */
+        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -259,7 +258,7 @@
             font-size: 0.9rem;
         }
 
-        /* --- Projects Section --- */
+        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -327,7 +326,7 @@
             color: var(--accent-color);
         }
 
-        /* --- Contact Section --- */
+        /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -375,7 +374,7 @@
             border-color: var(--accent-color);
         }
 
-        /* --- Footer --- */
+        /* Footer */
         footer {
             text-align: center;
             padding: 25px 8%;
@@ -400,7 +399,6 @@
             color: var(--accent-color);
         }
 
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
@@ -421,7 +419,7 @@
             }
 
             .nav-links {
-                display: none; /* Can add modern mobile menu if needed */
+                display: none;
             }
         }
     </style>
@@ -430,7 +428,7 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">Portfolio.</a>
+        <a href="#" class="logo">Ashita.</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -442,13 +440,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <p class="greeting">Namaste! Main Hoon</p>
-            <h1>Apna Naam Likhein</h1>
-            <h2>Full Stack Web Developer / Designer</h2>
-            <p>Main modern, stylish aur scalable websites & web applications banata hoon. Aayein milkar kuch naya aur behtareen banate hain.</p>
+            <p class="greeting">Hello, I'm</p>
+            <h1>Ashita</h1>
+            <h2>Creative Developer & Designer</h2>
+            <p>I design and build beautiful, modern, and user-friendly digital experiences. Welcome to my personal space on the web!</p>
             <div class="btn-group">
-                <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-envelope"></i> Contact Karein</a>
-                <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> Projects Dekhein</a>
+                <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-envelope"></i> Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Work</a>
             </div>
         </div>
     </section>
@@ -456,29 +454,21 @@
     <!-- About Section -->
     <section id="about">
         <div class="section-title">
-            <h2>Mere Baare Mein</h2>
+            <h2>About Me</h2>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <p>Hello! Mera naam [Aapka Naam] hai. Mujhe coding aur visual design ka shauk hai. Main fast, responsive aur high-performance websites banane me specialist hoon.</p>
-                <p>Mujhe nayi technologies sikhna aur real-world problems ko software design dwara solve karna pasand hai.</p>
+                <p>Hi, I am Ashita! I am passionate about technology, design, and creating elegant solutions for complex problems.</p>
+                <p>I love learning new tools, experimenting with creative layouts, and delivering clean, efficient code that works seamlessly across all devices.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <h3>2+</h3>
-                    <p>Saal Ka Experience</p>
-                </div>
-                <div class="stat-card">
-                    <h3>15+</h3>
-                    <p>Projects Complete Kiye</p>
-                </div>
-                <div class="stat-card">
                     <h3>10+</h3>
-                    <p>Happy Clients</p>
+                    <p>Projects Done</p>
                 </div>
                 <div class="stat-card">
                     <h3>100%</h3>
-                    <p>Dedication</p>
+                    <p>Passion & Effort</p>
                 </div>
             </div>
         </div>
@@ -487,28 +477,23 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-title">
-            <h2>Meri Skills</h2>
+            <h2>Skills & Abilities</h2>
         </div>
         <div class="skills-grid">
             <div class="skill-card">
                 <i class="fa-brands fa-html5"></i>
-                <h3>Frontend Development</h3>
-                <p>HTML5, CSS3, JavaScript, React JS, Tailwind CSS</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-server"></i>
-                <h3>Backend Development</h3>
-                <p>Node.js, Express, Python, MySQL, MongoDB</p>
+                <h3>Web Design</h3>
+                <p>HTML5, CSS3, JavaScript, Responsive Web Layouts</p>
             </div>
             <div class="skill-card">
                 <i class="fa-solid fa-pen-ruler"></i>
-                <h3>UI/UX Designing</h3>
-                <p>Figma, Adobe XD, Responsive Layouts, Prototyping</p>
+                <h3>UI/UX Design</h3>
+                <p>Figma, Visual Design, Prototyping, Wireframing</p>
             </div>
             <div class="skill-card">
-                <i class="fa-solid fa-code-branch"></i>
-                <h3>Tools & Technologies</h3>
-                <p>Git, GitHub, VS Code, Postman, Vercel</p>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Development Tools</h3>
+                <p>Git, GitHub, VS Code, Web Performance</p>
             </div>
         </div>
     </section>
@@ -516,56 +501,35 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="section-title">
-            <h2>Mere Projects</h2>
+            <h2>Featured Projects</h2>
         </div>
         <div class="projects-grid">
-            <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>E-Commerce Web Application</h3>
-                    <p>Ek fully functional shopping app jisme user authentication, cart system aur payment gateway dynamic hai.</p>
-                    <div class="tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Portfolio Website Template</h3>
-                    <p>Sleek dark theme web portfolio template developer community aur UI lovers ke liye.</p>
+                    <h3>Personal Portfolio</h3>
+                    <p>A modern dark-themed responsive portfolio site built using HTML, CSS, and FontAwesome icons.</p>
                     <div class="tags">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
                         <span class="tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>AI Chat Dashboard</h3>
-                    <p>AI tools integration Dashboard interface dark mode support aur analytics widgets ke saath.</p>
+                    <h3>Creative Web Design</h3>
+                    <p>Sleek and aesthetic landing page design created with focus on seamless user experience.</p>
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">API</span>
-                        <span class="tag">Tailwind</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">CSS</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -575,7 +539,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-title">
-            <h2>Contact Karein</h2>
+            <h2>Get In Touch</h2>
         </div>
         <div class="contact-container">
             <div class="contact-info">
@@ -583,24 +547,24 @@
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>yourname@email.com</p>
+                        <p>ashita@email.com</p>
                     </div>
                 </div>
                 <div>
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <h4>Location</h4>
-                        <p>Delhi, India</p>
+                        <p>India</p>
                     </div>
                 </div>
             </div>
             
             <div class="contact-form">
                 <form>
-                    <input type="text" placeholder="Aapka Naam" required>
-                    <input type="email" placeholder="Aapka Email" required>
-                    <textarea rows="5" placeholder="Aapka Message..." required></textarea>
-                    <button type="submit" class="btn btn-primary">Message Bhejein</button>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
@@ -611,12 +575,10 @@
         <div class="social-icons">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <p>© 2024 Apna Naam. All Rights Reserved.</p>
+        <p>© 2024 Ashita. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-
